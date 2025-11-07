@@ -1,9 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap Icons CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+        <!-- AOS CDN -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+        <!-- Main CSS File -->
+        <link href="{{ asset('styles/css/main/global.css') }}" rel="stylesheet">
+        <link href="{{ asset('styles/css/main/header.css') }}" rel="stylesheet">
+        <link href="{{ asset('styles/css/main/nav.css') }}" rel="stylesheet">
+        <link href="{{ asset('styles/css/main/hero.css') }}" rel="stylesheet">
+        <link href="{{ asset('styles/css/main/about.css') }}" rel="stylesheet">
+        <link href="{{ asset('styles/css/main/featured.css') }}" rel="stylesheet">
+        <link href="{{ asset('styles/css/main/service.css') }}" rel="stylesheet">
+        <link href="{{ asset('styles/css/main/faq.css') }}" rel="stylesheet">
+        <link href="{{ asset('styles/css/main/footer.css') }}" rel="stylesheet">
+        <link href="{{ asset('styles/css/main/preload.css') }}" rel="stylesheet">
+
+
         {% block stylesheets %}
         {% endblock %}
 
@@ -12,6 +48,17 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+        <main class="main" role="main">
+            {% block body %}{% endblock %}
+        </main>
+
+        <!-- Main JS File -->
+        <script src="{{ asset('js/main.js') }}"></script>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+        </script>
     </body>
 </html>

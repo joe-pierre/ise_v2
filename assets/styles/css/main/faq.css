@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+# Faq Section
+--------------------------------------------------------------*/
+.fqa-title {
+    padding-bottom: 3rem !important;
+}
+
+.accordion-button {
+    font-weight: 600;
+}
+
+.accordion-button:not(.collapsed),
+.accordion-button:not(.collapsed) .faq-number {
+    color: var(--accent-color);
+    background-color: transparent;
+}
+
+.accordion-body {
+    padding-left: 3rem;
+    color: color-mix(in srgb, var(--default-color), transparent 15%);
+    line-height: 1.8;
+}
+
+.faq-number {
+    color: var(--default-color);
+    font-weight: 600;
+    margin-right: 1rem;
+}

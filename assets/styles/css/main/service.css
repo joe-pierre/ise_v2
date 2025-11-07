@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.jp__top__shadow {
+    box-shadow: 0 -5px 5px -5px #aeaeae;
+}
+
+.services {
+    padding: 120px 0;
+}
+
+.jp__service_item-padding {
+    padding: 1.5rem 1rem;
+}
+
+.services .service-item {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    height: 100%;
+    position: relative;
+}
+
+.services .service-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.services .service-item:hover .service-icon i {
+    transform: scale(1.1);
+}
+
+.services .service-item:hover .service-link {
+    color: var(--accent-color);
+}
+
+.services .service-item:hover .service-link i {
+    transform: translateX(8px);
+}
+
+.services .service-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    background: linear-gradient(
+        135deg,
+        var(--accent-color),
+        color-mix(in srgb, var(--accent-color), #6c5ce7 20%)
+    );
+    border-radius: 50%;
+}
+
+.services .service-icon i {
+    font-size: 36px;
+    color: var(--contrast-color);
+    transition: transform 0.3s ease;
+}
+
+.services h3 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+}
+
+.services .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--heading-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.services .service-link i {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .services {
+        padding: 80px 0;
+    }
+
+    .services .service-item {
+        padding: 40px 24px;
+    }
+
+    .services .service-icon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 32px;
+    }
+
+    .services .service-icon i {
+        font-size: 28px;
+    }
+
+    .services h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .services p {
+        font-size: 15px;
+        margin-bottom: 32px;
+    }
+}
