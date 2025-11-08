@@ -1,6 +1,8 @@
 twig:
     file_name_pattern: '*.twig'
     globals:
+        website_name: '%app.website_name%'
+        website_url: '%app.website_url%'
         website_email: '%app.website_email%'
         website_phone: '%app.website_phone%'
 

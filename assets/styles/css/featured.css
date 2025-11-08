@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # Featured Services Section
 --------------------------------------------------------------*/
-.featured-services .service-item {
+.formations .formation-item {
     height: 100%;
     padding: 60px 40px;
     border-radius: 8px;
@@ -12,7 +12,7 @@
     overflow: hidden;
 }
 
-.featured-services .service-item::before {
+.formations .formation-item::before {
     content: "";
     position: absolute;
     top: 0;
@@ -29,63 +29,32 @@
     transition: transform 0.4s ease;
 }
 
-.featured-services .service-item:hover {
+.formations .formation-item:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px
         color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
-.featured-services .service-item:hover::before {
+.formations .formation-item:hover::before {
     transform: scaleX(1);
 }
 
-.featured-services .service-item:hover .service-icon {
-    background: linear-gradient(
-        135deg,
-        var(--accent-color),
-        color-mix(in srgb, var(--accent-color), var(--heading-color) 20%)
-    );
-}
-
-.featured-services .service-item:hover .service-icon i {
-    color: var(--contrast-color);
-    transform: scale(1.1);
-}
-
-.featured-services .service-item:hover .service-link {
+.formations .formation-item:hover .formation-link {
     opacity: 1;
     transform: translateY(0);
 }
 
-.featured-services .service-item:hover .service-link i {
+.formations .formation-item:hover .formation-link i {
     transform: translateX(8px);
 }
 
 @media (max-width: 768px) {
-    .featured-services .service-item {
+    .formations .formation-item {
         padding: 40px 30px;
     }
 }
 
-.featured-services .service-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: color-mix(in srgb, var(--accent-color), transparent 90%);
-    border-radius: 50%;
-    transition: all 0.4s ease;
-}
-
-.featured-services .service-icon i {
-    font-size: 36px;
-    color: var(--accent-color);
-    transition: all 0.4s ease;
-}
-
-.featured-services h3 {
+.formations h3 {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
@@ -93,7 +62,7 @@
     line-height: 1.3;
 }
 
-.featured-services p {
+.formations p {
     color: color-mix(in srgb, var(--default-color));
     text-align: center;
     line-height: 1.7;
@@ -101,7 +70,7 @@
     font-size: 15px;
 }
 
-.featured-services .service-link {
+.formations .formation-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,15 +84,15 @@
     transition: all 0.4s ease;
 }
 
-.featured-services .service-link span {
+.formations .formation-link span {
     font-weight: 500;
 }
 
-.featured-services .service-link i {
+.formations .formation-link i {
     font-size: 16px;
     transition: transform 0.3s ease;
 }
 
-.featured-services .service-link:hover {
+.formations .formation-link:hover {
     color: var(--heading-color);
 }

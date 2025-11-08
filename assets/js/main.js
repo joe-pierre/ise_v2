@@ -1,10 +1,13 @@
-/**
-* Template Name: CoreBiz
-* Template URL: https://bootstrapmade.com/corebiz-bootstrap-business-template/
-* Updated: Aug 30 2025 with Bootstrap v5.3.8
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+import '../styles/css/global.css';
+import '../styles/css/header.css';
+import '../styles/css/nav.css';
+import '../styles/css/hero.css';
+import '../styles/css/about.css';
+import '../styles/css/featured.css';
+import '../styles/css/service.css';
+import '../styles/css/faq.css';
+import '../styles/css/footer.css';
+import '../styles/css/preload.css';
 
 (function() {
   "use strict";
@@ -16,7 +19,14 @@
     const selectBody = document.querySelector('body');
     const selectHeader = document.querySelector('#header');
     if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+    if (window.scrollY > 100) {
+      // console.log("you are scrolling");
+      selectBody.classList.add('scrolled');
+      // console.log(selectBody);
+    } else {
+      selectBody.classList.remove('scrolled')
+    }
+    // window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
 
   document.addEventListener('scroll', toggleScrolled);
@@ -103,18 +113,6 @@
     });
   }
   window.addEventListener('load', aosInit);
-
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
 
   /**
    * Animate the skills items on reveal

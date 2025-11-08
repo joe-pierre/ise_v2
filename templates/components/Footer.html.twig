@@ -1,0 +1,73 @@
+<footer{{ attributes }} id="footer" class="footer light-background jp__top__shadow">
+
+	<div class="container footer-top z-1">
+		<div class="row gy-4 row-wrap">
+			<div class="col-lg-6 col-md-6 footer-about">
+				<a href="index.html" class="d-flex align-items-center">
+					<img class="object-fit-cover" src="{{ asset('img/ise/logo-ise.png') }}" alt="Logo de l'ISE">
+				</a>
+				<div class="footer-contact pt-3">
+					<p>FST - Faculté des Sciences et Techniques</p>
+					<p>Université Cheikh Anta Diop de Dakar (UCAD)</p>
+					<p>BP 5005 Dakar, Sénégal</p>
+				</div>
+			</div>
+
+			<div class="col-lg-3 col-md-3 justify footer-links">
+				<h4 class="mt-2">Plan du site</h4>
+				<ul>
+					<li>
+						<i class="bi bi-chevron-right"></i>
+						<a href="#">Accueil</a>
+					</li>
+					<li>
+						<i class="bi bi-chevron-right"></i>
+						<a href="#">Formations</a>
+					</li>
+					<li>
+						<i class="bi bi-chevron-right"></i>
+						<a href="#">Admissions</a>
+					</li>
+					<li>
+						<i class="bi bi-chevron-right"></i>
+						<a href="#">Enseignements</a>
+					</li>
+					<li>
+						<i class="bi bi-chevron-right"></i>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="col-lg-3 col-md-3 footer-links">
+				<h4>Liens utiles</h4>
+				<ul>
+					<li>
+						<i class="bi bi-chevron-right"></i>
+						<a href="https://ucad.sn">UCAD</a>
+					</li>
+					<li>
+						<i class="bi bi-chevron-right"></i>
+						<a href="https://fst.ucad.sn">FST</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="text-center mt-5">
+		<hr class="mb-0 mt-0 d-inline-block" style="width: calc(100vw - 40%);">
+	</div>
+	<div class="container copyright text-center mt-4">
+		<p>&copy;
+			<strong class="px-1 sitename">ISE</strong>
+			<span>2023 - {{ 'now'|date('Y') }}</span>&middot;
+			<span>Tous droits reservés</span>
+		</p>
+		<div class="credits">
+			<p>Built with <i class="bi bi-heart-fill heart"></i> by <a href="https://joe-pierre.com/">Joe Pierre</a></p>
+		</div>
+	</div>
+
+</footer>

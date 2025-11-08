@@ -3,10 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <meta name="description" content="Institut des Sciences de l’Environnement (ISE) – FST - UCAD. Formations, admissions et concours dans les métiers de l’environnement.">
+        <meta name="keywords" content="ISE, UCAD, Environnement, Dakar, Concours, Master, Licence, Sciences de l’environnement">
 
-        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <title>{% block title %}{{website_name}}{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         <!-- Favicons -->
         <link href="assets/img/favicon.png" rel="icon">
@@ -26,37 +27,56 @@
 
         <!-- AOS CDN -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
 
-        <!-- Main CSS File -->
-        <link href="{{ asset('styles/css/main/global.css') }}" rel="stylesheet">
-        <link href="{{ asset('styles/css/main/header.css') }}" rel="stylesheet">
-        <link href="{{ asset('styles/css/main/nav.css') }}" rel="stylesheet">
-        <link href="{{ asset('styles/css/main/hero.css') }}" rel="stylesheet">
-        <link href="{{ asset('styles/css/main/about.css') }}" rel="stylesheet">
-        <link href="{{ asset('styles/css/main/featured.css') }}" rel="stylesheet">
-        <link href="{{ asset('styles/css/main/service.css') }}" rel="stylesheet">
-        <link href="{{ asset('styles/css/main/faq.css') }}" rel="stylesheet">
-        <link href="{{ asset('styles/css/main/footer.css') }}" rel="stylesheet">
-        <link href="{{ asset('styles/css/main/preload.css') }}" rel="stylesheet">
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "CollegeOrUniversity",
+            "name": "Institut des Sciences de l’Environnement (ISE)",
+            "url": "https://ise.sn",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Dakar",
+                "addressCountry": "SN"
+            },
+            "parentOrganization": {
+                "@type": "CollegeOrUniversity",
+                "name": "Université Cheikh Anta Diop de Dakar"
+            }
+        }
+        </script>
 
 
         {% block stylesheets %}
         {% endblock %}
 
         {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
+            {% block importmap %}{{ importmap(['app', 'main']) }}{% endblock %}
         {% endblock %}
     </head>
     <body>
+        <twig:Header />
 
         <main class="main" role="main">
             {% block body %}{% endblock %}
         </main>
 
-        <!-- Main JS File -->
-        <script src="{{ asset('js/main.js') }}"></script>
+    	<twig:Footer />
+    
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+            <i class="bi bi-arrow-up-short"></i>
+        </a>
 
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <!-- Preloader -->
+        <div id="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
         <script>
         AOS.init();
         </script>
