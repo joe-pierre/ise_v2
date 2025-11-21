@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{website_name ~ ' - Admissions'}}
+{% endblock %}
+
+{% block javascripts %}
+	{% block importmap %}
+		{{ importmap(['app', 'admission']) }}
+	{% endblock %}
+{% endblock %}
+
+{% block body %}
+	<div class="page-title aos-init aos-animate" data-aos="fade">
+		<div class="container d-lg-flex justify-content-between align-items-center">
+			<h1 class="mb-2 mb-lg-0">Admissions</h1>
+			<nav class="breadcrumbs">
+				<ol>
+					<li>
+						<a href="{{ path('app_home') }}">Accueil</a>
+					</li>
+					<li>Admissions</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+
+	<section id="admission-section" class="container admission-section section">
+
+		<div class="section-title aos-init aos-animate" data-aos="fade-up">
+			<h2>Comment s'inscrir à l'ISE ?</h2>
+		</div>
+
+		<div class="container col-md-8 max-auto amdission-pt-0 aos-init aos-animate" data-aos="fade-up">
+
+			<p>Pour s’inscrire à l’Institut des Sciences de l’Environnement (ISE), le candidat doit constituer un dossier complet comprenant les documents suivants :</p>
+
+			<ol>
+				<li>Fiche de renseignement à télécharger via ce lien (<a href="/infos/fiche-renseignement-ISE.pdf" download>télécharger la fiche de renseignement</a>)</li>
+				<li>Deux (02) photos d’identité</li>
+				<li>Photocopie légalisée de votre attestation de réussite de la Licence L3 (Toutes les Licences sont acceptées)</li>
+				<li>Photocopies légalisées de vos relevés de notes de licences (de la Licence 1 à la Licence 3)</li>
+				<li>Photocopie légalisée de votre diplôme du Bac</li>
+				<li>Photocopie légalisée de votre Carte d’identité nationale (CNI) ou du passeport pour les étrangers</li>
+				<li>Demande manuscrite adressée au Directeur de l’Institut des Sciences de l’Environnement</li>
+			</ol>
+
+			<p>Scannez et enregistrez ces documents sur votre ordinateur puis rendez-vous sur la plateforme de l’ISE (<a href="{{ webapp_url }}">{{ webapp_name }}</a>).</p>
+
+			<p>
+				<strong>NB: après la candidature en ligne, ce rendre au bureau du secretariat de l'ISE et faire un dépot physique des documents mentionnées ci-dessus.</strong>
+			</p>
+
+			<p>
+				De plus pour les
+				<strong>étudiants de nationalité étrangère</strong>
+				et les
+				<strong>étudiants sénégalais qui n’ont jamais eu une inscription à l’UCAD</strong>, il est demandé à la suite des dépots en ligne et physique, de faire une demande d'équivalence en ligne sur le site
+				<a href="http://admission.ucad.sn" target="_blank" rel="noopener noreferrer">admission.ucad.sn</a>
+				(rendez-vous sur le site, cliquez sur « le guide du candidat » et suivez les instructions).
+			</p>
+
+			<p>
+				Aussi pour les
+				<strong>anciens étudiants de l’UCAD</strong>
+				c’est à dire ceux qui eurent une inscription à l’UCAD et n’ont pas une inscription en cours à l’UCAD, il est demandé en plus du dépôt physique, de faire une demande d'admission en ligne sur le site
+				<a href="http://admission.ucad.sn" target="_blank" rel="noopener noreferrer">admission.ucad.sn</a>
+				(rendez-vous sur le site, cliquez sur « le guide du candidat » et suivez les instructions)
+			</p>
+
+			<div class="important-note">
+
+				<p>
+					<strong>Note très importante</strong>
+				</p>
+
+				<p>
+					Pour toutes les formations de l'ISE, il est obligatoire après sélection de s’acquitter des frais d’inscription de cinquante mille Francs CFA (50 000 Fcfa) à verser au bureau de la scolarité de la Faculté des Sciences et Techniques (FST) de l’UCAD.
+				</p>
+
+				<p>
+					Notez bien que les Masters à l’ISE se font sur deux (02) années, Master 1 puis Master 2 ; ce même si vous êtes déjà titulaire d’un Master ou d’un Master 1.
+				</p>
+
+			</div>
+		</div>
+
+	</section>
+{% endblock %}

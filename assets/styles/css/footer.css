@@ -139,9 +139,7 @@
     font-weight: 600;
     font-family: var(--heading-font);
 }
-.jp__tiny__left_margin {
-    margin-left: 1rem;
-}
+
 
 .footer .footer-contact p {
     margin-bottom: 5px;

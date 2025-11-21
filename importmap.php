@@ -16,8 +16,20 @@ return [
         'path' => './assets/app.js',
         'entrypoint' => true,
     ],
-    'main' => [
-        'path' => './assets/js/main.js',
+    'home' => [
+        'path' => './assets/js/home.js',
+        'entrypoint' => true,
+    ],
+    'formation' => [
+        'path' => './assets/js/formation.js',
+        'entrypoint' => true,
+    ],
+    'admission' => [
+        'path' => './assets/js/admission.js',
+        'entrypoint' => true,
+    ],
+    'contact' => [
+        'path' => './assets/js/contact.js',
         'entrypoint' => true,
     ],
     '@hotwired/stimulus' => [

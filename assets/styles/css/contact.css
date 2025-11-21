@@ -1,0 +1,53 @@
+#contact-section,
+.section-title {
+    padding-bottom: 0 !important;
+}
+
+.contact .btn-primary {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+}
+
+.contact .btn-primary:hover {
+    background: color-mix(in srgb, var(--accent-color), black 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px
+        color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.contact .btn-primary {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 14px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+}
+
+.contact-info p {
+    margin-left: 0.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.info i {
+    font-size: 1.25rem;
+}
+
+
+.horaire p {
+    margin-bottom: 0.4rem;
+}
+
+.map-container {
+    height: 400px; /* ou 100vh, ou ce que tu veux */
+}

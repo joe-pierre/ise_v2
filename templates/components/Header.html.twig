@@ -24,19 +24,19 @@
 			<nav id="navmenu" class="navmenu">
 				<ul>
 					<li>
-						<a href="{{ path('app_home') }}" class="active">Accueil</a>
+						<a href="{{ path('app_home') }}" class="{{ app.request.pathInfo == path('app_home') ? 'active' : '' }}">Accueil</a>
 					</li>
 					<li>
-						<a href="#about">Formations</a>
+						<a href="{{ path('app_admission') }}" class="{{ app.request.pathInfo == path('app_admission') ? 'active' : '' }}">Admissions</a>
 					</li>
 					<li>
-						<a href="#services">Admissions</a>
+						<a href="{{ path('app_formation') }}" class="{{ app.request.pathInfo == path('app_formation') ? 'active' : '' }}">Formations</a>
 					</li>
+					{# <li>
+						<a href="{{ path('app_enseignement') }}" class="{{ app.request.pathInfo == path('app_enseignement') ? 'active' : '' }}">Enseignements</a>
+					</li> #}
 					<li>
-						<a href="#portfolio">Enseignements</a>
-					</li>
-					<li>
-						<a href="#contact">Contact</a>
+						<a href="{{ path('app_contact') }}" class="{{ app.request.pathInfo == path('app_contact') ? 'active' : '' }}">Contact</a>
 					</li>
 				</ul>
 				<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

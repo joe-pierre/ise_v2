@@ -1,7 +1,3 @@
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
-
 :root {
     --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
         "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -201,6 +197,27 @@ section,
     margin-bottom: 0;
 }
 
+.page-title .breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.page-title .breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+.page-title .breadcrumbs ol li+li::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
+}
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -215,4 +232,31 @@ section,
     font-weight: 300;
     line-height: 1.2;
     letter-spacing: -0.02em;
+}
+
+.jp__top__shadow {
+    box-shadow: 0 -5px 5px -5px #aeaeae;
+}
+
+.jp__tiny__left_margin {
+    margin-left: 1rem;
+}
+
+.admission-section {
+    line-height: 1.8;
+}
+
+.highlight-text {
+    color: var(--heading-color);
+    font-weight: 400;
+    /* font-size: 1.25rem; */
+}
+
+.important-text {
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+.special-note {
+    color: var(--accent-color);
 }

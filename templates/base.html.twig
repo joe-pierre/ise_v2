@@ -3,8 +3,19 @@
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta name="description" content="Institut des Sciences de l’Environnement (ISE) – FST - UCAD. Formations, admissions et concours dans les métiers de l’environnement.">
-        <meta name="keywords" content="ISE, UCAD, Environnement, Dakar, Concours, Master, Licence, Sciences de l’environnement">
+
+        {% block metadata %}
+            <meta name="description" content="Institut des Sciences de l’Environnement (ISE) – FST - UCAD. Formations, admissions et concours dans les métiers de l’environnement.">
+            <meta name="keywords" content="ISE, UCAD, Environnement, Dakar, Concours, Master, Licence, Sciences de l’environnement">
+
+            <meta property="og:title" content="Institut des Sciences de l’Environnement (ISE)">
+            <meta property="og:description" content="Institut des Sciences de l’Environnement (ISE) – FST - UCAD. Formations, admissions et concours.">
+            <meta property="og:image" content="{{ asset('img/ise/logo-ise.png') }}">
+            <meta property="og:url" content="{{ app.request.uri }}">
+            <meta property="og:type" content="website">
+
+            <meta name="twitter:card" content="summary_large_image">
+        {% endblock %}
 
 
         <title>{% block title %}{{website_name}}{% endblock %}</title>
@@ -27,35 +38,36 @@
 
         <!-- AOS CDN -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
 
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "CollegeOrUniversity",
-            "name": "Institut des Sciences de l’Environnement (ISE)",
-            "url": "https://ise.sn",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Dakar",
-                "addressCountry": "SN"
-            },
-            "parentOrganization": {
+        {% block ldjson %}
+            <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
                 "@type": "CollegeOrUniversity",
-                "name": "Université Cheikh Anta Diop de Dakar"
+                "name": "Institut des Sciences de l’Environnement (ISE)",
+                "url": "https://ise.sn",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Dakar",
+                    "addressCountry": "SN"
+                },
+                "parentOrganization": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Université Cheikh Anta Diop de Dakar"
+                }
             }
-        }
-        </script>
+            </script>
+        {% endblock %}
 
 
         {% block stylesheets %}
         {% endblock %}
 
         {% block javascripts %}
-            {% block importmap %}{{ importmap(['app', 'main']) }}{% endblock %}
+            {% block importmap %}{{ importmap(['app', 'home']) }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
+    <body data-controller="hello">
         <twig:Header />
 
         <main class="main" role="main">
@@ -77,8 +89,12 @@
             <div></div>
         </div>
 
+        <!-- AOS CDN -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
-        AOS.init();
+        AOS.init({
+            once: true
+        });
         </script>
     </body>
 </html>

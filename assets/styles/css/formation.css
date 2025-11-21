@@ -1,0 +1,15 @@
+.formation-section p {
+  line-height: 1.8;
+}
+.formation-section .section-title {
+  padding-bottom: 1rem !important;
+}
+
+section.formation {
+  padding: 0 !important;
+}
+
+.formation-section .formation-item {
+  padding-bottom: 1.5rem !important;
+  padding-top: 3rem !important;
+}

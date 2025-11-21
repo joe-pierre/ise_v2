@@ -1,0 +1,258 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{website_name ~ ' - Formations'}}
+{% endblock %}
+
+{% block ldjson %}
+	<script type="application/ld+json">
+	{
+	"@context": "https://schema.org",
+	"@type": "Course",
+	"name": "Institut des Sciences de l’Environnement - Formations",
+	"provider": {
+		"@type": "CollegeOrUniversity",
+		"name": "Institut des Sciences de l’Environnement"
+	},
+	"educationalCredentialAwarded": "Master, Licence",
+	"hasCourseInstance": {
+		"@type": "CourseInstance",
+		"courseMode": "En présentiel",
+		"instructor": "Enseignants-chercheurs et professionnels du secteur"
+	}
+	}
+	</script>
+{% endblock %}
+
+{% block javascripts %}
+	{% block importmap %}
+		{{ importmap(['app', 'formation']) }}
+	{% endblock %}
+{% endblock %}
+
+{% block body %}
+	<div class="page-title aos-init aos-animate" data-aos="fade">
+		<div class="container d-lg-flex justify-content-between align-items-center">
+			<h1 class="mb-2 mb-lg-0">Formations</h1>
+			<nav class="breadcrumbs">
+				<ol>
+					<li>
+						<a href="{{ path('app_home') }}">Accueil</a>
+					</li>
+					<li>Formations</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+
+	<section id="formation-section" class="container formation-section section" aria-labelledby="formations-title">
+		<div class="col-md-8 col-lg-8 mx-auto">
+
+			<div class="aos-init aos-animate" data-aos="fade-up">
+				<div class="section-title aos-init aos-animate" data-aos="fade-up">
+					<header>
+						<h2 id="formations-title">Nos Formations à l'ISE</h2>
+						<p>Découvrez nos programmes de formation en journée et en soirée, conçus pour permettre aux professionnels et aux étudiants en activité de concilier leurs études avec leur emploi du temps.:</p>
+					</header>
+				</div>
+			</div>
+
+			<!-- Cours du jour -->
+			<section class="formation">
+
+				<!-- LPE -->
+				<article id="licence-professionnelle-lpe" class="formation-item">
+					<h3>Licence Professionnelle Sciences de l’Environnement (LPE) 🎓</h3>
+					<div class="aos-init aos-animate" data-aos="fade-up">
+						<p>
+							La Licence Professionnelle Sciences de l’Environnement (LPE) forme des techniciens supérieurs et cadres intermédiaires capables d’analyser, comprendre et gérer les problématiques environnementales actuelles. Cette formation, dispensée en cours du jour, combine enseignements théoriques et pratiques pour offrir des compétences solides dans les domaines suivants :
+						</p>
+						<ul>
+							<li>Gestion durable des ressources naturelles</li>
+							<li>Évaluation et suivi de la qualité de l’eau, de l’air et des sols</li>
+							<li>Traitement et valorisation des déchets</li>
+							<li>Lutte contre la pollution et protection de la biodiversité</li>
+							<li>Sensibilisation et éducation environnementale</li>
+						</ul>
+						<p>
+							Les étudiants bénéficient d’un encadrement assuré par des enseignants-chercheurs et des professionnels du secteur. Des travaux pratiques, des sorties de terrain et un stage professionnel facilitent leur insertion dans le monde du travail.
+						</p>
+						<p>
+							<strong>Objectif final :</strong>
+							former des professionnels capables de contribuer efficacement à la gestion durable de l’environnement, dans les institutions publiques comme privées.
+						</p>
+						<p>
+							<strong>Organisation :</strong>
+							cours du jour (<strong>formation payante</strong>)</p>
+						<p>
+							<strong>Durée :</strong>
+							3 ans (Licence 1, Licence 2 et Licence 3)
+						</p>
+						<p>
+							<strong>Coût total :</strong>
+							3 500 000 F CFA
+						</p>
+					</div>
+				</article>
+
+				<!-- ENVI -->
+				<article id="master-envi" class="formation-item">
+					<h3>Master Sciences de l’Environnement (ENVI) 🌍</h3>
+					<div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+						<p>
+							Le Master Sciences de l’Environnement (ENVI) offre une compréhension approfondie des enjeux environnementaux contemporains. Il s’adresse aux étudiants souhaitant se spécialiser dans :
+						</p>
+						<ul>
+							<li>La compréhension des phénomènes environnementaux</li>
+							<li>La gestion durable des écosystèmes</li>
+							<li>L’élaboration et l’évaluation des politiques environnementales</li>
+							<li>L’analyse et la prévention des pollutions</li>
+							<li>Le suivi et la conservation de la biodiversité</li>
+							<li>La planification environnementale et territoriale</li>
+							<li>Le développement durable et la transition écologique</li>
+						</ul>
+						<p>
+							Le programme combine enseignements théoriques, études de cas et travaux pratiques pour une formation complète et professionnalisante.
+						</p>
+						<p>
+							<strong>Objectif final :</strong>
+							former des cadres de haut niveau capables d’analyser les phénomènes environnementaux, de gérer durablement les écosystèmes et de concevoir des politiques adaptées.
+						</p>
+						<p>
+							<strong>Organisation :</strong>
+							cours du jour</p>
+						<p>
+							<strong>Durée :</strong>
+							2 ans (Master 1 et Master 2)</p>
+						<p>
+							<strong>Admission :</strong>
+							par voie de concours
+						</p>
+						<p>
+							<strong>Frais :</strong>
+							50 000 F CFA par an (après admission)
+						</p>
+					</div>
+				</article>
+
+			</section>
+
+			<!-- Cours du soir -->
+			<section class="formation">
+
+				<!-- GERENAD -->
+				<article id="master-gerenad" class="formation-item">
+					<h3>Master Gestion des Ressources Naturelles et Développement Durable (GERENAD) 🌿</h3>
+					<div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+						<p>
+							Le Master GERENAD dote les étudiants d’outils modernes pour une gestion durable des ressources naturelles. Cette approche interdisciplinaire combine écologie, économie, sociologie et gouvernance environnementale.
+						</p>
+						<ul>
+							<li>Conservation et valorisation des ressources naturelles</li>
+							<li>Politiques publiques de développement durable</li>
+							<li>Outils de planification et de gestion participative</li>
+							<li>Évaluation environnementale et sociale des projets</li>
+							<li>Adaptation aux changements climatiques</li>
+						</ul>
+						<p>
+							<strong>Objectif final :</strong>
+							former des experts capables d’élaborer des stratégies conciliant développement économique, équité sociale et protection de l’environnement.</p>
+						<p>
+							<strong>Organisation :</strong>
+							cours du soir (<strong>formation payante</strong>)</p>
+						<p>
+							<strong>Durée :</strong>
+							2 ans (Master 1 et Master 2)</p>
+						<p>
+							<strong>Coût total :</strong>
+							3 000 000 F CFA (1 500 000 F CFA/an)
+						</p>
+					</div>
+				</article>
+
+				<!-- RSE -->
+				<article id="master-rse" class="formation-item">
+					<h3>Master Responsabilité Sociale et Environnementale (RSE) 🌱</h3>
+					<div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+						<p>
+							Le Master RSE forme des professionnels capables d’intégrer les principes du développement durable dans les entreprises et institutions. Il met l’accent sur la gouvernance responsable, l’éthique et la gestion des impacts sociaux et environnementaux.
+						</p>
+						<ul>
+							<li>Conception et mise en œuvre des politiques RSE</li>
+							<li>Communication et reporting en développement durable</li>
+							<li>Évaluation des performances environnementales et sociales</li>
+							<li>Innovation et transition écologique</li>
+							<li>Gestion des parties prenantes et conformité réglementaire</li>
+						</ul>
+						<p>
+							<strong>Organisation :</strong>
+							cours du soir (<strong>formation payante</strong>)</p>
+						<p>
+							<strong>Durée :</strong>
+							2 ans (Master 1 et Master 2)</p>
+						<p>
+							<strong>Coût total :</strong>
+							3 000 000 F CFA (1 500 000 F CFA/an)
+						</p>
+					</div>
+				</article>
+
+				<!-- EGRM -->
+				<article id="master-egrm" class="formation-item">
+					<h3>Master Environnement et Gestion des Rejets Miniers (EGRM) ⛏️</h3>
+					<div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+						<p>
+							Ce master forme des spécialistes capables d’évaluer et de gérer les impacts environnementaux du secteur minier. Il associe des enseignements scientifiques, techniques et réglementaires pour une expertise complète.
+						</p>
+						<ul>
+							<li>Traitement et gestion des rejets miniers</li>
+							<li>Surveillance environnementale des sites</li>
+							<li>Réhabilitation écologique</li>
+							<li>Normes et réglementations environnementales</li>
+							<li>Analyse des risques et gestion des déchets dangereux</li>
+						</ul>
+						<p>
+							<strong>Organisation :</strong>
+							cours du soir (<strong>formation payante</strong>)</p>
+						<p>
+							<strong>Durée :</strong>
+							2 ans (Master 1 et Master 2)</p>
+						<p>
+							<strong>Coût total :</strong>
+							3 500 000 F CFA (1 750 000 F CFA/an)
+						</p>
+					</div>
+				</article>
+
+				<!-- AP -->
+				<article id="master-ap" class="formation-item">
+					<h3>Master Assainissement Productif (AP) 💧</h3>
+					<div class="aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+						<p>
+							Le Master AP prépare les étudiants à concevoir et mettre en œuvre des systèmes d’assainissement innovants, durables et productifs. Il valorise les sous-produits issus du traitement des eaux et boues dans une logique d’économie circulaire.
+						</p>
+						<ul>
+							<li>Conception et gestion des infrastructures d’assainissement</li>
+							<li>Valorisation des eaux usées et boues de vidange</li>
+							<li>Technologies de recyclage et de réutilisation</li>
+							<li>Politiques publiques et gouvernance</li>
+							<li>Éducation et sensibilisation communautaire</li>
+						</ul>
+						<p>
+							<strong>Organisation :</strong>
+							cours du soir (<strong><strong>formation payante</strong></strong>)</p>
+						<p>
+							<strong>Durée :</strong>
+							2 ans (Master 1 et Master 2)</p>
+						<p>
+							<strong>Coût total :</strong>
+							3 000 000 F CFA (1 500 000 F CFA/an)
+						</p>
+					</div>
+				</article>
+
+			</section>
+		</div>
+	</section>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+.admission-section p {
+  line-height: 1.8;
+}
+
+.admission-section .section-title {
+  padding-bottom: 1rem !important;
+}
+
+.amdission-pt-0 {
+  padding-top: 0 !important;
+}
+
+.important-note p {
+  line-height: 1.8;
+  margin-bottom: 0.2rem;
+  font-family: var(--heading-font);
+  font-weight: 400;
+  color: red
+}
