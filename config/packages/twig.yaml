@@ -3,8 +3,13 @@ twig:
     globals:
         website_name: '%app.website_name%'
         website_url: '%app.website_url%'
+
         webapp_name: '%app.webapp_name%'
         webapp_url: '%app.webapp_url%'
+
+        ucad_webapp_name: '%app.ucad_webapp_name%'
+        ucad_webapp_url: '%app.ucad_webapp_url%'
+        
         website_email: '%app.website_email%'
         website_phone: '%app.website_phone%'
 

@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{website_name ~ ' - Procédure d’inscription pour les étudiants étrangers ou hors UCAD
+'}}
+{% endblock %}
+
+{% block javascripts %}
+	{% block importmap %}
+		{{ importmap(['app', 'admission']) }}
+	{% endblock %}
+{% endblock %}
+
+{% block body %}
+	<div class="page-title aos-init aos-animate" data-aos="fade">
+		<div class="container d-lg-flex justify-content-between align-items-center">
+			<h1 class="mb-2 mb-lg-0">Procédure d’inscription pour les étudiants étrangers ou hors UCAD</h1>
+			<nav class="breadcrumbs">
+				<ol>
+					<li>
+						<a href="{{ path('app_home') }}">Accueil</a>
+					</li>
+					<li>Procédure</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+
+	<section id="admission-section" class="container admission-section section">
+
+		<div class="section-title aos-init aos-animate" data-aos="fade-up">
+			<h2>Procédure</h2>
+		</div>
+
+		<div class="container col-md-8 max-auto amdission-pt-0 aos-init aos-animate" data-aos="fade-up">
+
+			<p>Pour les <strong>étudiants de nationalité étrangère</strong> ou les <strong>étudiants qui n'ont jamais eu une inscription à l'UCAD</strong> , le candidat doit constituer un dossier complet comprenant les documents suivants :</p>
+
+			<twig:ApplicationFile master="true" bachelor="true" />
+
+			<div class="important-note">
+
+				<p>
+					<strong>Note très importante: En plus du dossier ci-dessus, il est obligatoire de faire une demande d'equivalence en ligne sur le site <a href="{{ ucad_webapp_url }}" target="_blank" rel="noopener noreferrer">{{ ucad_webapp_name }}</a> (rendez-vous sur le site, cliquez sur « le guide du candidat » et suivez les instructions).</strong>
+				</p>
+
+				<p>
+					Pour toutes les formations de l'ISE, il est obligatoire après sélection de s’acquitter des frais d’inscription de cinquante mille Francs CFA (50 000 Fcfa) à verser au bureau de la scolarité de la Faculté des Sciences et Techniques (FST) de l’UCAD.
+				</p>
+
+				<p>
+					Notez bien que les Masters à l’ISE se font sur deux (02) années, Master 1 puis Master 2 ; ce même si vous êtes déjà titulaire d’un Master ou d’un Master 1.
+				</p>
+
+			</div>
+		</div>
+
+	</section>
+{% endblock %}

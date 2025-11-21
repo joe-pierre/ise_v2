@@ -25,6 +25,30 @@ final class PageController extends AbstractController
     {
         return $this->render('page/admission.html.twig');
     }
+
+    #[Route('/details-du-concours', name: 'app_details_concours')]
+    public function detailConcours(): Response
+    {
+        return $this->render('page/admission.html.twig');
+    }
+
+    #[Route('/procedure-dinscription-pour-les-etudiants-inscrits-a-lucad', name: 'app_inscription_etudiant_ucad')]
+    public function inscriptionEtudiantUcad(): Response
+    {
+        return $this->render('page/inscription_etudiant_ucad.html.twig');
+    }
+    
+    #[Route('/procedure-dinscription-pour-les-anciens-etudiants-de-lucad', name: 'app_inscription_ancien_etudiant_ucad')]
+    public function inscriptionAncienEtudiantUcad(): Response
+    {
+        return $this->render('page/inscription_ancien_etudiant_ucad.html.twig');
+    }
+    
+    #[Route('/procedure-dinscription-pour-les-etudiants-etrangers-ou-hors-ucad', name: 'app_inscription_etudiant_hors_ucad')]
+    public function inscriptionEtudiantHorsUcad(): Response
+    {
+        return $this->render('page/inscription_etudiant_hors_ucad.html.twig');
+    }
     
     #[Route('/enseignements', name: 'app_enseignement')]
     public function enseignement(): Response

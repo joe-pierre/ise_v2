@@ -6,8 +6,13 @@
 parameters:
     app.website_name: Institut des Sciences de l'Environnement
     app.website_url: https://ise.sn
+    
     app.webapp_name: admisson.ise.sn
     app.webapp_url: https://admisson.ise.sn
+
+    app.ucad_webapp_name: admisson.ucad.sn
+    app.ucad_webapp_url: https://admission.ucad.sn/
+
     app.website_email: ise.fst@ucad.edu.sn
     app.website_phone: +221 77 185 19 81
 
