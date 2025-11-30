@@ -28,6 +28,10 @@ return [
         'path' => './assets/js/admission.js',
         'entrypoint' => true,
     ],
+    'concours' => [
+        'path' => './assets/js/concours.js',
+        'entrypoint' => true,
+    ],
     'contact' => [
         'path' => './assets/js/contact.js',
         'entrypoint' => true,

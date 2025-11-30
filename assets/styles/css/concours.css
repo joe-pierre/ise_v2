@@ -1,0 +1,19 @@
+.concours-section p {
+  line-height: 1.8;
+}
+
+.concours-section .section-title {
+  padding-bottom: 1rem !important;
+}
+
+.important-note {
+  line-height: 1.8;
+  margin-bottom: 0.2rem;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  color: red
+}
+
+p span {
+  font-size: 1.25rem;
+}

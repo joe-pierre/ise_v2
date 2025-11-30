@@ -29,7 +29,7 @@ final class PageController extends AbstractController
     #[Route('/details-du-concours', name: 'app_details_concours')]
     public function detailConcours(): Response
     {
-        return $this->render('page/admission.html.twig');
+        return $this->render('page/concours_ise.html.twig');
     }
 
     #[Route('/procedure-dinscription-pour-les-etudiants-inscrits-a-lucad', name: 'app_inscription_etudiant_ucad')]
