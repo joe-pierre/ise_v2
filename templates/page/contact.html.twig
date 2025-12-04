@@ -69,29 +69,25 @@
 			</div>
 
 			<div class="col-md-6 themed-grid-col">
-				<form action="#" method="post" role="form" class="p-4 shadow w-100 php-email-form">
+				{{ form_start(form, { 'attr': { 'novalidate': 'novalidate' } }) }}
 					<div class="row mb-3">
 						<div class="form-group col-md-6">
-							<label for="name">Prénom(s) et Nom</label>
-							<input type="text" name="name" class="form-control" id="name" required="">
+							{{ form_row(form.fullname, { 'attr': { 'class': 'form-control' } }) }}
 						</div>
 						<div class="form-group col-md-6">
-							<label for="email">Email</label>
-							<input type="email" class="form-control" name="email" id="email" required="">
+							{{ form_row(form.email, { 'attr': { 'class': 'form-control' } }) }}
 						</div>
 					</div>
 					<div class="form-group mb-3">
-						<label for="subject">Objet</label>
-						<input type="text" class="form-control" name="subject" id="subject" required="">
+						{{ form_row(form.subject, { 'attr': { 'class': 'form-control' } }) }}
 					</div>
 					<div class="form-group">
-						<label for="message">Message</label>
-						<textarea class="form-control" placeholder="Saisissez votre message ici ..." name="message" rows="10" required=""></textarea>
+						{{ form_row(form.message, { 'attr': { 'class': 'form-control' } }) }}
 					</div>
 					<div class="mt-4 text-center">
 						<button class="btn-primary w-100" type="submit">Envoyer</button>
 					</div>
-				</form>
+				{{ form_end(form) }}
 			</div>
 		</div>
 

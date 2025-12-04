@@ -16,6 +16,8 @@ parameters:
     app.website_email: ise.fst@ucad.edu.sn
     app.website_phone: +221 77 185 19 81
 
+    app.admission_test_period: 15 juillet au 15 novembre
+
 services:
     # default configuration for services in *this* file
     _defaults:

@@ -13,6 +13,8 @@ twig:
         website_email: '%app.website_email%'
         website_phone: '%app.website_phone%'
 
+        admission_test_period: '%app.admission_test_period%'
+
 when@test:
     twig:
         strict_variables: true
