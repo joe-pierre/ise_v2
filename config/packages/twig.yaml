@@ -13,6 +13,12 @@ twig:
         website_email: '%app.website_email%'
         website_phone: '%app.website_phone%'
 
+        ise_admission_concours: '%app.ise_admission_concours%'
+        ise_admission_concours_url: '%app.ise_admission_concours_url%'
+
+        ise_admission_formations: '%app.ise_admission_formations%'
+        ise_admission_formations_url: '%app.ise_admission_formations_url%'
+
         admission_test_period: '%app.admission_test_period%'
 
 when@test:

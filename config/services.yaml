@@ -13,6 +13,12 @@ parameters:
     app.ucad_webapp_name: admission.ucad.sn
     app.ucad_webapp_url: https://admission.ucad.sn/
 
+    app.ise_admission_concours: admission.ise.sn/concours
+    app.ise_admission_concours_url: https://admission.ise.sn/concours
+
+    app.ise_admission_formations: admission.ise.sn/formations-payantes
+    app.ise_admission_formations_url: https://admission.ise.sn/formations-payantes
+
     app.website_email: ise.fst@ucad.edu.sn
     app.website_phone: +221 77 185 19 81
 
