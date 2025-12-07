@@ -20,6 +20,7 @@ rsync -avz \
   --exclude '.env' \
   --exclude '.git' \
   --exclude '.editorconfig' \
+  --exclude 'deploy.sh' \
   "$SRC" \
   "$DEST_USER@$DEST_HOST:$DEST_PATH"
 
