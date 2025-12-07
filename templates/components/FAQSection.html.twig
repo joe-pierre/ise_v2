@@ -58,7 +58,7 @@
 							</h4>
 							<div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
 								<div class="accordion-body">
-									<p>Pour postuler au concours vous devez faire votre dépot de dossier et payer les frais d'inscription (10 000 FCFA) au concours, en ligne à l'adresse suivante <a href="#">admission.ise.sn/concours</a>. Après le dépot en ligne rendez vous au bureau du secretariat de l'ISE et déposer les documents physiques uniquement <strong>(NB: PAS DE FRAIS SUPPLEMENTAIRES)</strong>.</p>
+									<p>Pour postuler au concours vous devez faire votre dépot de dossier et payer les frais d'inscription (10 000 FCFA) au concours, en ligne à l'adresse suivante <a href="{{ise_admission_concours_url}}">{{ise_admission_concours}}</a>. Après le dépot en ligne rendez vous au bureau du secretariat de l'ISE et déposer les documents physiques uniquement <strong>(NB: PAS DE FRAIS SUPPLEMENTAIRES)</strong>.</p>
 
 									<twig:ApplicationFile master="true" bachelor="true" />
 
@@ -76,8 +76,8 @@
 								<div class="accordion-body">
 									<p>Désormais, toutes les candidatures se font exclusivement en ligne selon la procédure suivante :</p>
 									<ol>
-										<li>Remplissez et Scannez les <a href="" target="_blank" >documents  photocopiés et légalisés</a> qui constitueront votre dossier.</li>
-										<li>Envoyer ces documents via le lien 👉 <a href="{{ise_admission_concours_url}}">{{ ise_admission_concours }}</a>.</li>
+										<li>Consulter la liste des <a href="{{ path('app_admission') }}#admission-section" target="_blank" >documents à photocopier et légaliser</a> qui constitueront votre dossier.</li>
+										<li>Envoyer ces documents via le lien <a href="{{ise_admission_concours_url}}">👉 {{ ise_admission_concours }}</a>.</li>
 										<li>Téléversez (uploadez) vos documents scannés.</li>
 										<li>Effectuez le paiement des frais de dossier en ligne via Wave.</li>
 										<li>Après validation en ligne, apportez les documents physiques et déposez-les au bureau du secrétariat.</li>
@@ -98,8 +98,8 @@
 								<div class="accordion-body">
 									<p>Désormais, les candidatures aux formations payantes se font exclusivement en ligne selon la procédure suivante :</p>
 									<ol>
-										<li>Scanner les <a href="" target="_blank" >documents  photocopiés et légalisés</a> qui constitueront votre dossier.</li>
-										<li>Envoyer ces documents via le lien 👉 <a href="{{ise_admission_formations}}">{{ise_admission_formations_url}}</a>.</li>
+										<li>Consulter la liste des <a href="{{ path('app_admission') }}#admission-section" target="_blank" >documents à photocopier et légaliser</a> qui constitueront votre dossier.</li>
+										<li>Envoyer ces documents via le lien <a href="{{ise_admission_formations_url}}">👉 {{ise_admission_formations}}</a>.</li>
 										<li>Téléversez (uploadez) vos documents scannés.</li>
 										<li>Effectuez le paiement des frais de dossier en ligne via Wave.</li>
 										<li>Après validation en ligne, apportez les documents physiques et déposez-les au bureau du secrétariat.</li>

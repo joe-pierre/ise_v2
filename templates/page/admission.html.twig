@@ -25,57 +25,55 @@
 		</div>
 	</div>
 
-	<section id="admission-section" class="container admission-section section">
+	<section id="admission-section" class="container admission-section section py-5">
 
 		<div class="section-title aos-init aos-animate" data-aos="fade-up">
-			<h2>Comment s'inscrir à l'ISE ?</h2>
+			<h2>Comment s'inscrire à l'ISE ?</h2>
 		</div>
 
-		<div class="container col-md-8 max-auto amdission-pt-0 aos-init aos-animate" data-aos="fade-up">
+		<div class="container col-md-8 mx-auto admission-content" data-aos="fade-up">
 
-			<p>Pour s’inscrire à l’Institut des Sciences de l’Environnement (ISE), le candidat doit constituer un dossier complet comprenant les documents suivants :</p>
-
-			<twig:ApplicationFile master="true" />
-
-			<p>Scannez et enregistrez ces documents sur votre ordinateur puis rendez-vous sur la plateforme de l’ISE (<a href="{{ webapp_url }}">{{ webapp_name }}</a>).</p>
-
-			<p>
-				<strong>NB: après la candidature en ligne, ce rendre au bureau du secretariat de l'ISE et faire un dépot physique des documents mentionnées ci-dessus.</strong>
+			<p class="mb-3">
+				Pour s’inscrire à l’Institut des Sciences de l’Environnement (ISE), le candidat doit constituer un dossier complet comprenant les documents suivants :
 			</p>
 
-			<p>
-				De plus pour les
-				<strong>étudiants de nationalité étrangère</strong>
-				et les
-				<strong>étudiants sénégalais qui n’ont jamais eu une inscription à l’UCAD</strong>, il est demandé à la suite des dépots en ligne et physique, de faire une demande d'équivalence en ligne sur le site
-				<a href="http://admission.ucad.sn" target="_blank" rel="noopener noreferrer">admission.ucad.sn</a>
-				(rendez-vous sur le site, cliquez sur « le guide du candidat » et suivez les instructions).
+			<twig:ApplicationFile master="true" bachelor="true" />
+
+			<p class="mb-3">
+				Scannez et enregistrez ces documents sur votre ordinateur puis rendez-vous sur la plateforme de l’ISE 
+				(<a href="{{ webapp_url }}" class="fw-bold text-primary">{{ webapp_name }}</a>).
 			</p>
 
-			<p>
-				Aussi pour les
-				<strong>anciens étudiants de l’UCAD</strong>
-				c’est à dire ceux qui eurent une inscription à l’UCAD et n’ont pas une inscription en cours à l’UCAD, il est demandé en plus du dépôt physique, de faire une demande d'admission en ligne sur le site
-				<a href="http://admission.ucad.sn" target="_blank" rel="noopener noreferrer">admission.ucad.sn</a>
-				(rendez-vous sur le site, cliquez sur « le guide du candidat » et suivez les instructions)
+			<p class="mb-3">
+				<strong>NB : après la candidature en ligne, rendez-vous au bureau du secrétariat de l'ISE et faites un dépôt physique des documents mentionnés ci-dessus.</strong>
 			</p>
 
-			<div class="important-note">
+			<p class="mb-3">
+				De plus, pour les <strong>étudiants de nationalité étrangère</strong> et les 
+				<strong>étudiants sénégalais n’ayant jamais eu d’inscription à l’UCAD</strong>, il est demandé, à la suite des dépôts en ligne et physique, de faire une demande d'équivalence en ligne sur le site
+				<a href="{{ ucad_webapp_url }}" target="_blank" rel="noopener noreferrer" class="text-primary fw-bold">{{ ucad_webapp_name}}</a>
+				(cliquez sur « le guide du candidat » et suivez les instructions).
+			</p>
+
+			<p class="mb-3">
+				Aussi pour les <strong>anciens étudiants de l’UCAD</strong> — ceux qui ont déjà eu une inscription à l’UCAD mais n’ont pas d’inscription en cours — il est demandé, en plus du dépôt physique, de faire une demande d'admission en ligne sur le site
+				<a href="{{ ucad_webapp_url }}" target="_blank" rel="noopener noreferrer" class="text-primary fw-bold">{{ ucad_webapp_name }}</a>
+				(cliquez sur « le guide du candidat » et suivez les instructions).
+			</p>
+
+			<div class="important-alert alert alert-danger shadow-sm p-4 mt-4">
+				<h5 class="fw-bold mb-3 text-danger">⚠️ Note très importante</h5>
 
 				<p>
-					<strong>Note très importante</strong>
+					Pour toutes les formations de l'ISE, il est obligatoire, après sélection, de s’acquitter des frais d’inscription de <strong>cinquante mille Francs CFA (50 000 FCFA)</strong> à verser au bureau de la scolarité de la Faculté des Sciences et Techniques (FST) de l’UCAD.
 				</p>
 
 				<p>
-					Pour toutes les formations de l'ISE, il est obligatoire après sélection de s’acquitter des frais d’inscription de cinquante mille Francs CFA (50 000 Fcfa) à verser au bureau de la scolarité de la Faculté des Sciences et Techniques (FST) de l’UCAD.
+					Notez bien que les Masters à l’ISE se déroulent sur <strong>deux années</strong> : Master 1 puis Master 2, même si vous êtes déjà titulaire d’un Master ou d’un Master 1.
 				</p>
-
-				<p>
-					Notez bien que les Masters à l’ISE se font sur deux (02) années, Master 1 puis Master 2 ; ce même si vous êtes déjà titulaire d’un Master ou d’un Master 1.
-				</p>
-
 			</div>
-		</div>
 
+		</div>
 	</section>
+
 {% endblock %}

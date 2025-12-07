@@ -1,7 +1,7 @@
 .admission-section p {
   line-height: 1.8;
 }
-
+/* 
 .admission-section .section-title {
   padding-bottom: 1rem !important;
 }
@@ -16,4 +16,26 @@
   font-family: var(--heading-font);
   font-weight: 400;
   color: red
+} */
+
+/*  */
+
+
+.admission-section h2 {
+    font-size: 2rem;
+}
+
+.important-alert {
+    border-left: 6px solid #dc3545;
+    background: #ffe8e8;
+    border-radius: 8px;
+}
+
+.important-alert p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.important-alert strong {
+    color: #a50000;
 }

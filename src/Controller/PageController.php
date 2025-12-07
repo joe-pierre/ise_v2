@@ -34,7 +34,7 @@ final class PageController extends AbstractController
         return $this->render('page/concours_ise.html.twig');
     }
 
-    #[Route('/procedure-dinscription-pour-les-etudiants-inscrits-a-lucad', name: 'app_inscription_etudiant_ucad')]
+    #[Route('/procedure-dinscription-pour-les-etudiants-regulierment-inscrits-a-lucad', name: 'app_inscription_etudiant_ucad')]
     public function inscriptionEtudiantUcad(): Response
     {
         return $this->render('page/inscription_etudiant_ucad.html.twig');
