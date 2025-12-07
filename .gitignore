@@ -1,4 +1,6 @@
 /_notes/
+/deploy.sh
+/z_newsp_connect.sh
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
