@@ -52,9 +52,9 @@ final class PageController extends AbstractController
         return $this->render('page/inscription_etudiant_hors_ucad.html.twig');
     }
     
-    #[Route('/enseignements', name: 'app_enseignement')]
-    public function enseignement(): Response
-    {
-        return $this->render('page/formation.html.twig');
-    }
+    // #[Route('/enseignements', name: 'app_enseignement')]
+    // public function enseignement(): Response
+    // {
+    //     return $this->render('page/formation.html.twig');
+    // }
 }
