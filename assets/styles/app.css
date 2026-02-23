@@ -2,3 +2,46 @@
     background-color: skyblue;
 } */
 
+/* ===== BANDE DÉROULANTE INFORMATIVE ===== */
+.announcement-bar {
+    background: linear-gradient(90deg, #d4500a, #e8690f, #d4500a);
+    color: #fff;
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.announcement-track {
+    display: inline-block;
+    animation: scrollMarquee 35s linear infinite;
+}
+
+.announcement-track:hover {
+    animation-play-state: paused; /* pause au survol */
+}
+
+.announcement-content {
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+.announcement-content strong {
+    font-weight: 700;
+}
+
+@keyframes scrollMarquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Responsive : texte légèrement plus petit sur mobile */
+@media (max-width: 576px) {
+    .announcement-bar {
+        font-size: 0.78rem;
+        padding: 6px 0;
+    }
+}
