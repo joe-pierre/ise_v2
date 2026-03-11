@@ -4,9 +4,15 @@
 {% endblock %}
 
 {% block body %}
-	<twig:HeroSection />
-	<twig:AboutSection />
-	<twig:FormationSection />
-	<twig:HowToRegisterSection />
-	<twig:FAQSection />
+
+	{% include '_partials/home_page/hero_section.html.twig' %}
+	
+	{% include '_partials/home_page/about_section.html.twig' %}
+	
+	{% include '_partials/home_page/formation_section.html.twig' %}
+	
+	{% include '_partials/home_page/how_to_register_section.html.twig' %}
+	
+	{% include '_partials/home_page/faq_section.html.twig' %}
+	
 {% endblock %}

@@ -32,21 +32,8 @@
 		</div>
 
 		<div class="container col-md-8 max-auto amdission-pt-0 aos-init aos-animate" data-aos="fade-up">
-
-			<div class="concours-info alert alert-info shadow-sm p-4 mb-4">
-				<h5 class="fw-bold mb-3 text-primary">Déroulement du concours</h5>
-
-				<p>
-					Le concours d'entrée consiste en une <strong>épreuve de dissertation portant sur l'environnement</strong>.
-					Cette épreuve dure <strong>04 heures (09H00' - 13H00')</strong> et se déroule généralement
-					<strong>le dernier ou l’avant-dernier samedi du mois de novembre à l’Institut des Sciences de l’Environnement</strong>.
-				</p>
-
-				<p class="mt-3">
-					Les candidats ayant réussi l’épreuve écrite seront ensuite convoqués pour un
-					<strong>entretien oral</strong>, organisé après la publication officielle des résultats du concours.
-				</p>
-			</div>
+			
+			{% include "_partials/info_deroulement_concours.html.twig" %}
 
 			<div>
 				<p>Pour candidater au concours d'entrée au Master Sciences de l'Environnement, il faut être titulaire d'une Licence 3 ou équivalent (<strong>Peut importe la Licence</strong>) puis constituer votre dossier contenant les documents ci-dessous :</p>
@@ -59,35 +46,11 @@
 					<li>Photocopie légalisée de votre diplôme du Bac</li>
 					<li>Photocopie légalisée de votre attestation de réussite de la Licence L3 (Toutes les Licences sont acceptées)</li>
 					<li>Photocopies légalisées de vos relevés de notes de licences (de la Licence 1 à la Licence 3)</li>
+					<li>10 000 Fcfa frais de dossier</li>
 				</ol>
 			</div>
 
-			<div class="important-alert alert alert-danger shadow-sm p-4 mt-4">
-				<h5 class="fw-bold mb-3 text-danger">⚠️ Note très importante</h5>
-
-				<p>
-					Désormais, vous devez
-					<strong>faire votre dépôt de dossier et payer les frais d'inscription au concours (10 000 FCFA) en ligne</strong>
-					à l'adresse suivante :
-					<a href="{{ webapp_url }}" class="fw-bold text-danger">
-						👉 {{ webapp_name }}
-					</a>.
-				</p>
-
-				<p class="mt-3">
-					Après le dépôt en ligne, vous devez vous présenter au
-					<strong>bureau du secrétariat de l'ISE</strong>
-					pour déposer les documents physiques uniquement.
-					<br>
-					<strong class="text-uppercase">
-						NB : Aucun frais supplémentaire ne sera demandé.
-					</strong>
-				</p>
-
-				<p class="mt-3 text-danger fw-bold">
-					⚠️ Toute autre forme de dépôt ou de paiement ne sera pas prise en compte.
-				</p>
-			</div>
+			{% include "_partials/info_payement.html.twig" %}
 
 
 		</div>

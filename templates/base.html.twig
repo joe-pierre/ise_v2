@@ -77,13 +77,14 @@
         {% endblock %}
     </head>
     <body data-controller="hello">
-        <twig:Header />
+        
+        {% include '_partials/base_section/header.html.twig' %}
 
         <main class="main" role="main">
             {% block body %}{% endblock %}
         </main>
 
-    	<twig:Footer />
+    	{% include '_partials/base_section/footer.html.twig' %}
     
         <!-- Scroll Top -->
         <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">

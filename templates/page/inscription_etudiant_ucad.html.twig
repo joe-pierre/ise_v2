@@ -36,7 +36,11 @@
 
 			<p>Pour les <strong>étudiants de l’UCAD</strong>, c'est-a-dire ceux qui jusque-là se sont toujours inscrits à l’UCAD, le candidat doit fournir un dossier complet contenant les documents suivants :</p>
 
-			<twig:ApplicationFile master="true" bachelor="true" />
+			{# <twig:ApplicationFile master="true" bachelor="true" /> #}
+
+			{% include '_partials/dossier_candidature_etudiant.html.twig' with {'page': 'inscription_etudiant_ucad' } %}
+
+			{% include '_partials/info_post_admission.html.twig' %}
 
 		</div>
 

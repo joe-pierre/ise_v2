@@ -1,0 +1,32 @@
+<div class="container col-md-8 max-auto amdission-pt-0 aos-init aos-animate" data-aos="fade-up">
+    <p>
+        {% if foreignStudent == true %}
+            Pour les <strong>étudiants de nationalité étrangère</strong>, c'est-à-dire les étudiants de nationalité non sénégalaise : 
+        {% endif %}
+
+        {% if formerStudent == true %}
+            Pour les <strong>anciens étudiants de l’UCAD</strong>, c'est-à-dire ceux qui n'ont plus été inscrits depuis au moins un (01) an à l'UCAD et qui n'ont pas d'inscription en cours : 
+        {% endif %}
+        le candidat doit fournir un dossier complet contenant les documents suivants :
+    </p>
+
+    {# <twig:ApplicationFile master="true" bachelor="true" /> #}
+
+    <ol>
+        <li>Fiche de renseignement à télécharger via ce lien (<a href="/infos/fiche-renseignement-ISE.pdf" download><i class="bi bi-cloud-download"></i> télécharger la fiche de renseignement</a>)</li>
+        <li>Deux (02) photos d’identité</li>
+        <li>Photocopie légalisée de votre Carte d’identité nationale (CNI) ou du passeport pour les étrangers</li>
+        <li>Demande manuscrite adressée au Directeur de l’Institut des Sciences de l’Environnement</li>
+        <li>Photocopie légalisée de votre attestation de réussite de la Licence L3 (Toutes les Licences sont acceptées)</li>
+        <li>Photocopies légalisées de vos relevés de notes de licences (de la Licence 1 à la Licence 3)</li>
+        <li>10 000 FCFA frais de dossier</li>
+    </ol>
+
+    {% if foreignStudent == true %}
+        {% include '_partials/admission_ucad.html.twig' %}
+    {% endif %}
+
+
+    {% include '_partials/info_post_admission.html.twig' %}
+
+</div>
