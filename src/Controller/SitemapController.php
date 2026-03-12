@@ -12,7 +12,6 @@ final class SitemapController extends AbstractController
     #[Route('/sitemap.xml', name: 'app_sitemap', defaults: ['_format' => 'xml'])]
     public function sitemap(SitemapGenerator $generator): Response
     {
-        
         $response = $this->render('sitemap/sitemap.xml.twig', [
             'urls' => $generator->generate(),
         ]);
