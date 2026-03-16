@@ -23,11 +23,21 @@
         <p>
             <strong>Organisation :</strong>
             cours du jour 
-            {% if inscritionOpened == true %}
+            {% set current_year = "now"|date('Y') %}
+            {% set today = "now"|date('Y-m-d') %}
+            {% set start_date = "#{current_year}-07-15"|date('Y-m-d') %}
+            {% set end_date = "#{current_year}-11-15"|date('Y-m-d') %}
+
+            {% if today >= start_date and today <= end_date %}
                 <span class="badge bg-success">Inscription en cours</span>
             {% else %}
                 <span class="badge bg-danger">Inscription clôturée</span>
             {% endif %}
+            {# {% if inscritionOpened == true %}
+                <span class="badge bg-success">Inscription en cours</span>
+            {% else %}
+                <span class="badge bg-danger">Inscription clôturée</span>
+            {% endif %} #}
         </p>
         <p>
             <strong>Durée :</strong> 2 ans (Master 1 et Master 2)</p>
