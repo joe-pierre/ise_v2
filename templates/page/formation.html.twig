@@ -57,12 +57,18 @@
 				</div>
 			</div>
 
+			<div class="container m-0">
+				{% include '_partials/info_post_admission.html.twig' %}
+			</div>
+
 			<!-- Cours du jour -->
 			<section class="container">
 
+				{# todo: mettre à false si les inscriptions sont cloturées pour la formation #}
 				<!-- LPE -->
 				{% include '_partials/formation_page/lpe.html.twig' with { inscritionOpened: true }  %}
 
+				{# todo: mettre à false si les inscriptions sont cloturées pour la formation #}
 				<!-- ENVI -->
 				{% include '_partials/formation_page/envi.html.twig' with { inscritionOpened: false }  %}
 
@@ -71,15 +77,19 @@
 			<!-- Cours du soir -->
 			<section class="container">
 
+				{# todo: mettre à false si les inscriptions sont cloturées pour la formation #}
 				<!-- GERENAD -->
-				{% include '_partials/formation_page/gerenad.html.twig' with { inscritionOpened: true }  %}
+				{% include '_partials/formation_page/gerenad.html.twig' with { inscritionOpened: false }  %}
 
+				{# todo: mettre à false si les inscriptions sont cloturées pour la formation #}
 				<!-- RSE -->
 				{% include '_partials/formation_page/rse.html.twig' with { inscritionOpened: true }  %}
 
+				{# todo: mettre à false si les inscriptions sont cloturées pour la formation #}
 				<!-- EGRM -->
 				{% include '_partials/formation_page/egrm.html.twig' with { inscritionOpened: true }  %}
 
+				{# todo: mettre à false si les inscriptions sont cloturées pour la formation #}
 				<!-- AP -->
 				{% include '_partials/formation_page/ap.html.twig' with { inscritionOpened: true } %}
 
