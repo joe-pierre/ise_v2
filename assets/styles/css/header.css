@@ -86,3 +86,55 @@
     visibility: hidden;
     overflow: hidden;
 }
+
+/*-------------------------------
+    Navigation Menu - clignotant "Nouveau" 
+ */
+
+.menu-new {
+    position: relative;
+}
+
+.new-badge {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #dc3545;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+
+    padding: 2px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+
+@media (max-width: 1199px) {
+    .menu-new .new-badge {
+        left: 35px;
+        transform: none;
+    }
+}
+
+@media (max-width: 1199px) {
+    .menu-new .new-badge {
+        left: 35px;
+        transform: none;
+    }
+}

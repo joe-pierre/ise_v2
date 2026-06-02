@@ -16,6 +16,10 @@ return [
         'path' => './assets/app.js',
         'entrypoint' => true,
     ],
+    'events' => [
+        'path' => './assets/js/events.js',
+        'entrypoint' => true,
+    ],
     'home' => [
         'path' => './assets/js/home.js',
         'entrypoint' => true,
