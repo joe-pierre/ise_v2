@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{website_name ~ ' - Evenements à venir'}}
+{% endblock %}
+
+{% block javascripts %}
+	{% block importmap %}
+		{{ importmap(['app', 'events']) }}
+	{% endblock %}
+{% endblock %}
+
+
+{% block body %}
+
+	<section
+		id="starter-section" class="starter-section section">
+
+		<!-- Section Title -->
+		<div class="container section-title" data-aos="fade-up">
+			<h2>Journée Mondiale de l’Environnement 2026</h2>
+			<p>Institut des Sciences de l’Environnement - Faculté des Sciences et Techniques - UCAD, Dakar</p>
+		</div>
+		<!-- End Section Title -->
+
+		<div class="container" data-aos="fade-up">
+			<div class="col-md-8 col-lg-8 mx-auto">
+
+				<p>
+					À l’occasion de la Journée Mondiale de l’Environnement 2026 organisée par l'Institut des de l'Environnement de l'Université Cheikh Anta Diop de Dakar, nous réaffirmons notre engagement pour un avenir plus durable et plus résilient.
+				</p>
+
+				<p>
+					Face aux défis climatiques, chaque geste compte et chaque citoyen a un rôle essentiel à jouer.
+				</p>
+
+				<p>
+					À travers des actions concrètes de sensibilisation, de reboisement, de salubrité et de mobilisation communautaire, nous contribuons à la protection de notre cadre de vie.
+				</p>
+
+				<p>
+					Cette célébration est une invitation à transformer nos engagements en actions durables pour les générations présentes et futures.
+				</p>
+
+				<p>
+					Ensemble, renforçons notre responsabilité collective envers la nature et les ressources qui nous font vivre.
+				</p>
+
+				<p>
+					Agir pour l’environnement aujourd’hui, c’est construire des communautés plus fortes, plus saines et mieux préparées aux changements climatiques.
+				</p>
+
+				<p>
+					Unis autour d’une même vision, faisons de cette journée un symbole d’espoir, d’action et de changement positif.
+				</p>
+
+				<!-- GRID SECTION -->
+				<div class="row mt-5">
+
+					<div class="col-md-6">
+						<div class="p-4 border rounded shadow-sm h-100">
+							<img src="{{ asset('img/ise/jme/affiche-jme-2026.jpeg') }}" alt="affiche-jme-2026" class="img-fluid mb-3">
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="p-4 border rounded shadow-sm h-100">
+							<img src="{{ asset('img/ise/jme/affiche2-jme-2026.jpeg') }}" alt="affiche2-jme-2026" class="img-fluid mb-3">
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+{% endblock %}

@@ -16,9 +16,7 @@
 	{# {% include '_partials/base_section/bande_deroulante.html.twig' %} #}
 	{# ===== FIN BANDE DÉROULANTE ===== #}
 
-	<div class="branding d-flex align-items-cente">
-
-		<div class="container position-relative d-flex align-items-center justify-content-between">
+		<div class="branding d-flex align-items-cente"> <div class="container position-relative d-flex align-items-center justify-content-between">
 			<div class="h-100">
 				<a href="{{ path('app_home') }}" class="logo d-flex align-items-center h-100">
 					<img src="{{ asset('img/ise/logo-ise.webp') }}" alt="Logo de l'ISE">
@@ -37,8 +35,49 @@
 						<a href="{{ path('app_formation') }}" class="{{ app.request.pathInfo == path('app_formation') ? 'active' : '' }}">Formations</a>
 					</li>
 					{# <li>
-											<a href="{{ path('app_enseignement') }}" class="{{ app.request.pathInfo == path('app_enseignement') ? 'active' : '' }}">Enseignements</a>
-										</li> #}
+							<a href="{{ path('app_enseignement') }}" class="{{ app.request.pathInfo == path('app_enseignement') ? 'active' : '' }}">Enseignements</a>
+						</li> #}
+
+					<li class="dropdown menu-new">
+					
+						{% if app.request.attributes.get('_route') is not same as('app_event_index') and app.request.attributes.get('_route') is not same as('app_event_show') %}
+							<span class="new-badge">Nouveau</span>
+						{% endif %}
+						{# <span class="new-badge {{ app.request.attributes.get('_route') == 'app_event_index' ? 'd-none' : '' }}">Nouveau</span> #}
+
+						<a href="#">
+							<span>Découvrir</span>
+							<i class="bi bi-chevron-down toggle-dropdown"></i>
+						</a>
+						<ul>
+							<li>
+								<a href="{{ path('app_event_index') }}">Nos évènements</a>
+							</li>
+							{# <li class="dropdown">
+								<a href="#">
+									<span>Deep Dropdown</span>
+									<i class="bi bi-chevron-down toggle-dropdown"></i>
+								</a>
+								<ul>
+									<li><a href="#">Deep Dropdown 1</a></li>
+									<li><a href="#">Deep Dropdown 2</a></li>
+									<li><a href="#">Deep Dropdown 3</a></li>
+									<li><a href="#">Deep Dropdown 4</a></li>
+									<li><a href="#">Deep Dropdown 5</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Dropdown 2</a>
+							</li>
+							<li>
+								<a href="#">Dropdown 3</a>
+							</li>
+							<li>
+								<a href="#">Dropdown 4</a>
+							</li> #}
+						</ul>
+					</li>
+
 					<li>
 						<a href="{{ path('app_contact') }}" class="{{ app.request.pathInfo == path('app_contact') ? 'active' : '' }}">Contact</a>
 					</li>
