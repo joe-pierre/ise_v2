@@ -26,7 +26,7 @@
             {# todo: refactor this by moving it to the controller #}
             {% set current_year = "now"|date('Y') %}
             {% set today = "now"|date('Y-m-d') %}
-            {% set start_date = "#{current_year}-07-15"|date('Y-m-d') %}
+            {% set start_date = "#{current_year}-07-01"|date('Y-m-d') %}
             {% set end_date = "#{current_year}-11-15"|date('Y-m-d') %}
 
             {% if today >= start_date and today <= end_date %}
