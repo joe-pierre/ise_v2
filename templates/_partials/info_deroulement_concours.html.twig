@@ -8,11 +8,56 @@
     <p>
         Le concours d'entrée consiste en une <strong>épreuve de dissertation portant sur l'environnement</strong>.
         Cette épreuve dure <strong>04 heures (09H00' - 13H00')</strong> et se déroule généralement
-        <strong>le dernier ou l’avant-dernier samedi du mois de novembre à l’Institut des Sciences de l’Environnement</strong>.
+        <strong>le dernier ou l'avant-dernier samedi du mois de novembre à l'Institut des Sciences de l'Environnement</strong>.
     </p>
 
     <p class="mt-3">
-        Les candidats ayant réussi l’épreuve écrite seront ensuite convoqués pour un
+        Les candidats ayant réussi l'épreuve écrite seront ensuite convoqués pour un
         <strong>entretien oral</strong>, organisé après la publication officielle des résultats du concours.
     </p>
+
+    <div class="mt-3 d-flex">
+        <div class="position-relative d-inline-block">
+            <span class="new-badge">Nouveau</span>
+            <button
+                type="button"
+                class="btn btn-outline-primary btn-sm"
+                data-bs-toggle="modal"
+                data-bs-target="#pdfModal"
+            >
+                <i class="bi bi-file-earmark-pdf me-1"></i>
+                Voir les sujets des années passées
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal PDF Viewer -->
+<div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pdfModalLabel">
+                    <i class="bi bi-file-earmark-pdf me-2 text-danger"></i>
+                    Sujets des années passées
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body p-0">
+                <iframe
+                    src="/infos/anciens-sujets-concours-d-entree-master-sciences-de-l-environnement.pdf"
+                    width="100%"
+                    height="600px"
+                    style="border: none;"
+                    title="Sujets des années passées"
+                ></iframe>
+            </div>
+            <div class="modal-footer">
+                <a href="/infos/anciens-sujets-concours-d-entree-master-sciences-de-l-environnement.pdf" download class="btn btn-success btn-sm">
+                    <i class="bi bi-download me-1"></i> Télécharger
+                </a>
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
 </div>
