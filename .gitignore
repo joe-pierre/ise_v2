@@ -1,6 +1,9 @@
 /_notes/
 /z_deploy.sh
 /z_server_connect.sh
+
+/.htaccess
+
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php
